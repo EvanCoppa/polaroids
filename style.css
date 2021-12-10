@@ -10,7 +10,7 @@
 .polaroid {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(/images/polaroid.png);
+  background-image: url(images/polaroid.png);
   width: 350px;
   height: 545px;
   position: relative;
