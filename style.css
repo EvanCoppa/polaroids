@@ -1,0 +1,114 @@
+/* polaroid */
+
+.polaroids {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.polaroid {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/images/polaroid.png);
+  width: 350px;
+  height: 545px;
+  position: relative;
+  left: 0px;  
+  top: 0px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.65s;
+  margin-top: 50px;
+}
+
+.polaroid img {
+  position: absolute;
+}
+
+.polaroid-img {
+  width: 312px;
+  height: 422px;
+  top: 32px;
+  left: 19px;
+  border-radius: 3px;
+  background-color: black;
+  transition: all 0.65s;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.polaroid-icon {
+  top: 200px;
+  left: 143px;
+  opacity: 0;
+  z-index: 10;
+  height: 60px;
+  width: 60px;
+  transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  transform: scale(0);
+}
+
+.polaroids div:nth-child(1):hover {
+  transform: translate(0%, -5%) rotate(-3deg);
+}
+
+.polaroids div:nth-child(1) h3 {
+  color: rgb(166, 218, 166);
+}
+
+.polaroids div:nth-child(2):hover {
+  transform: translate(0%, -5%);
+}
+
+.polaroids div:nth-child(2) h3 {
+}
+
+.polaroids div:nth-child(3):hover {
+  transform: translate(0%, -5%) rotate(3deg);
+}
+
+.polaroids div:nth-child(3) h3 {
+  color: rgb(255, 160, 160);
+}
+
+.polaroid:hover .polaroid-img {
+  opacity: 0.65;
+}
+
+.polaroid:hover h2 {
+  opacity: 0;
+}
+.polaroid:hover h3 {
+  opacity: 0;
+}
+
+.polaroid:hover .polaroid-icon {
+  opacity: 1;
+  transform: scale(0.8);
+}
+
+.polaroid h2,
+.polaroid h3 {
+  text-align: center;
+  z-index: 20;
+  opacity: 1;
+  margin-top: 100px;
+  position: absolute;
+  transition: all 0.4s;
+}
+
+.polaroid h2 {
+  top: 100px;
+  left: 0px;
+  width: 350px;
+  font-size: 40px;
+}
+
+.polaroid h3 {
+  top: 145px;
+  left: 0px;
+  width: 350px;
+  color: #cfc8ff;
+  font-size: 20px;
+}
+
